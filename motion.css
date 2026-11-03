@@ -1,0 +1,22 @@
+/* Motion stays decorative: content remains available without JavaScript. */
+@keyframes ef-enter{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes ef-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes ef-glow{0%,100%{opacity:.35;transform:translate(-3%,0) scale(.95)}50%{opacity:.7;transform:translate(4%,-3%) scale(1.06)}}
+@keyframes ef-dialog{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:no-preference){
+ .hero-grid>div:first-child>*{animation:ef-enter .8s cubic-bezier(.2,.7,.2,1) both}
+ .hero-grid .eyebrow{animation-delay:.05s}.hero-grid h1{animation-delay:.12s}.hero-grid .english-name{animation-delay:.18s}.hero-grid .hero-role{animation-delay:.24s}.hero-grid .hero-copy{animation-delay:.3s}.hero-grid .actions{animation-delay:.38s}.hero-grid .tags{animation-delay:.44s}
+ .hero-visual{animation:ef-enter 1s .18s both}.portrait-frame{animation:ef-float 7s 1.2s ease-in-out infinite}.portrait-note{animation:ef-float 8s 1.8s ease-in-out infinite}
+ .hero:after{content:'';position:absolute;inset:5% 0 0 40%;background:radial-gradient(ellipse,#24cce51a,transparent 65%);pointer-events:none;animation:ef-glow 12s ease-in-out infinite}.hero-grid{z-index:1}
+ .motion-pending{opacity:0;translate:0 24px;transition:opacity .7s ease,translate .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--reveal-delay,0ms)}
+ .motion-pending.is-visible,.motion-pending:focus-within{opacity:1;translate:0 0}
+ .project,.client-card,.cv{transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+ .project-art img,.feature-image img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+ .text-link{transition:gap .25s ease,color .25s ease}.text-link:hover{gap:18px}
+ .btn,.filter,.lang{transition:transform .25s ease,background .25s ease,box-shadow .25s ease,border-color .25s ease}
+ .btn:active,.filter:active{transform:translateY(1px)}
+ dialog[open]{animation:ef-dialog .28s ease both}
+ @media(hover:hover) and (pointer:fine){.project:hover,.client-card:hover,.cv:hover{transform:translateY(-6px);border-color:#39d5eb99;box-shadow:0 14px 32px #0003}.project:hover .project-art img,.feature:hover .feature-image img{transform:scale(1.025)}.btn.primary:hover{box-shadow:0 6px 25px #39d5eb24}.lang:hover{border-color:var(--accent);transform:translateY(-2px)}}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.motion-pending{opacity:1;translate:none}}
+@media print{.motion-pending{opacity:1!important;translate:none!important}*{animation:none!important}}

@@ -26,3 +26,10 @@ nav a{font-size:15px}.brand strong{font-size:16px}.hero-copy{font-size:17px}.her
 #projects .section-heading p{max-width:720px;font-size:17px;line-height:1.95;margin:0;color:#c9d4e1;text-wrap:pretty}
 html[lang=ar] #projects .section-heading{text-align:right}
 @media(max-width:740px){#projects .section-heading{margin-bottom:24px}#projects .section-heading h2{font-size:27px;margin-bottom:10px}#projects .section-heading p{font-size:16px;line-height:1.9}}
+/* Clear toolkit cards with independent, direction-aware technology labels. */
+.toolkit .section-heading{display:block;max-width:780px}.toolkit .section-heading p{margin-top:14px;max-width:700px}
+.toolkit .skill-grid{gap:22px;align-items:stretch}.toolkit .skill-group{position:relative;padding:28px;border:1px solid #2d465d;border-radius:12px;background:linear-gradient(145deg,#14283b,#101f30);overflow:hidden}
+.skill-number{display:block;color:var(--accent);font:12px/1.4 Inter,sans-serif;letter-spacing:2px;margin-bottom:20px}
+.toolkit .skill-group h3{font-size:21px;line-height:1.7;margin:0 0 8px}.toolkit .skill-group .skill-desc{font:inherit;font-size:14px;line-height:1.9;direction:inherit;text-align:start;color:var(--muted);margin:0 0 23px;min-height:54px}
+.tool-chips{display:flex;flex-wrap:wrap;gap:9px;align-content:start}.tool-chips span{display:inline-block;max-width:100%;padding:7px 11px;background:#1a3449;border:1px solid #304c62;border-radius:6px;font-size:13px;line-height:1.65;color:#e1edf7;overflow-wrap:anywhere;unicode-bidi:isolate}
+@media(max-width:1000px){.toolkit .skill-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:740px){.toolkit .skill-grid{grid-template-columns:1fr}.toolkit .skill-group{padding:24px}.toolkit .skill-group .skill-desc{min-height:0}.toolkit .skill-group h3{font-size:20px}}
